@@ -1,0 +1,145 @@
+*{
+    /* das mit Box-Sizing nicht gewusst */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    /* FONT-SIZE, nicht Text-Size */
+    font-size: 2rem;
+    text-transform:uppercase;
+    text-align: center;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > *{
+    margin: 1rem;
+    width: 70vw;
+    background-color: lightblue;
+}
+
+
+header{
+    height: auto;
+    padding:0.5rem;
+    display: flex;
+    font-size:1rem;
+
+}
+
+header *{
+    font-size:1rem;
+}
+
+header nav{
+    flex:4;
+}
+
+main >* {
+    border: 3px solid black;
+    border-radius: 1rem;
+
+}
+
+ 
+header aside{
+    flex:3;
+    text-align: right;
+}
+
+header #logo{
+    flex:3;
+    text-align: left;
+}
+
+/* header nav{
+    width:40%;
+}
+
+header aside{
+    width:30%;
+    text-align: right;
+}
+
+header #logo{
+    width: 30%;
+    text-align: left;
+} */
+
+
+main {
+    /* das ist wichtig: hier url("../") */
+    background-image: url("../img/imgIcon1920x720.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 
+        cover -> aspect ratio behalten, Rest cutten
+        contain -> aspect ration behalten, aber in Box reinquetschen
+    */
+    background-size: cover;
+    /* 
+    mit vh - viewport height kann man Größe prozentual an Seite anpassen
+    v gibt es auch
+    */
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+#title{
+    flex:3;
+    width:70%;
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title >*{
+    margin:0.5rem;
+    border:2px solid black;
+    border-radius: 5px;
+}
+
+#title h2{
+    font-size: 1rem;
+    text-transform:none;
+}
+
+#mainLinks{
+    display: flex;
+}
+
+#mainLinks *{
+    font-size:1rem;
+}
+
+#mainBlock{
+    flex:4;
+    margin:1rem;
+    width:70%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#mainBlock p{
+    text-transform: none;
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 641px) and (max-width: 1024px){
+    header{
+        height:1000px;
+        background-color: gray;
+    }
+}
